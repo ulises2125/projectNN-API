@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ItemsModule } from './items/items.module';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
       synchronize: true,
       models: [__dirname + '/models/*.model.ts'],
     }),
+    AuthModule,
   ],
   //imports: [ItemsModule],
   controllers: [AppController],
