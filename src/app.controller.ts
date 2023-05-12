@@ -15,8 +15,8 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Post('register')
+  /* @Post('register')
   registerUser(@Body() userObject: RegisterAuthDto) {
     console.log({ body: userObject });
-  }
+  } */
 }
